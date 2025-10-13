@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     srand(time(0)); // Initialisation du générateur aléatoire
-    ofstream answ("/app/results/answer_associativity.txt", ios::app); // Ouvre en mode ajout
+    ofstream answ("answer_associativity.txt", ios::app); // Ouvre en mode ajout
     if(!answ.is_open()){
         cout << "erreur ouverture fichier resultat" << endl;
     }
