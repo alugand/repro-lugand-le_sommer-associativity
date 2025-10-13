@@ -1,0 +1,5 @@
+name: 'C++ Runner'
+description: 'Compile and run a C++ file and output the result.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

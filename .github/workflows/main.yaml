@@ -1,0 +1,27 @@
+name: C++ Associativity Test
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run C++ Docker Action
+        id: cpp_run
+        uses: ./.github/actions/cpp-runner
+
+      - name: Commit and push result
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add answer_associativity.txt
+          # Commiter seulement s'il y a des changements
+          git commit -m "Automated: Add/update associativity result" || echo "No changes to commit"
+          git push
