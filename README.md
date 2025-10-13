@@ -4,7 +4,6 @@ This C++ program experimentally verifies whether the addition operation is assoc
 In theory, for real numbers a, b, and c:
 
 a + (b + c) = (a + b) + c
-a + (b + c) = (a + b) + c
 
 But in floating-point arithmetic, due to rounding errors, this equality may not always hold true.
 This program evaluates how often it holds true over a large number of random experiments.
@@ -28,7 +27,7 @@ g++ number.cpp -o number
 ```
 
 ### Results
-Results of the experiments can be found in the file answer_associativity.txt. Last experiment result is at the end of the file. When you relaunch the experiment, you will see your different results, with the latest results always at the end.
+Results of the experiments can be found in the file answer_associativity.txt. Last experiment result is at the end of the file. When you relaunch the experiment, you will see your different results, with the latest results always at the end. The result of the experiment could be 0.8, for example. This means that, out of 100 random experiments, approximately 80% of the combinations of values complied with the associativity of floating-point addition. Variations from one trial to another are normal, as random values change with each execution.
 ``` shell
 cat answer_associativity.txt
 ```
