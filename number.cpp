@@ -15,7 +15,7 @@ int main() {
     }
     else {
         int valeurok=0;
-        int nbexperience=100;
+        int nbexperience=1000;
         for(int i=0;i<nbexperience; i++){
             float val1 = static_cast<float>(rand());
             float val2 = static_cast<float>(rand());
