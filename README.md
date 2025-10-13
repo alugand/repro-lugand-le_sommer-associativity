@@ -8,6 +8,15 @@ a + (b + c) = (a + b) + c
 But in floating-point arithmetic, due to rounding errors, this equality may not always hold true.
 This program evaluates how often it holds true over a large number of random experiments.
 
+### With Docker
+In your shell run the following lines:
+``` shell
+docker build -t repro
+docker run -v .:/app/results repro
+```
+
+### With your own machine
+
 ### Setup
 Ensure that you have g++ installed
 ``` shell
