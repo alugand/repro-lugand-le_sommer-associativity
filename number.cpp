@@ -15,17 +15,27 @@ int main() {
     }
     else {
         int valeurok=0;
-        int nbexperience=1000;
+        int nbexperience=10000;
         for(int i=0;i<nbexperience; i++){
-            float val1 = static_cast<float>(rand());
-            float val2 = static_cast<float>(rand());
-            float val3 = static_cast<float>(rand());
+            double val1 = static_cast<double>(rand());
+            double val2 = static_cast<double>(rand());
+            double val3 = static_cast<double>(rand());
             if(val1+(val2+val3)==(val1+val2)+val3){
                 valeurok++;
             }
         }
-        float resultat = static_cast<float>(valeurok)/nbexperience;
-        answ << resultat <<endl;
+        double resultat = static_cast<double>(valeurok)/nbexperience;
+        answ << "Avec des double : "<<resultat <<endl;
+        for(int i=0;i<nbexperience; i++){
+            long double val1 = static_cast<long double>(rand());
+            long double val2 = static_cast<long double>(rand());
+            long double val3 = static_cast<long double>(rand());
+            if(val1+(val2+val3)==(val1+val2)+val3){
+                valeurok++;
+            }
+        }
+        resultat = static_cast<long double>(valeurok)/nbexperience;
+        answ << "Avec des long double : "<<resultat <<endl;
         answ.close();
     }
     return 0;
