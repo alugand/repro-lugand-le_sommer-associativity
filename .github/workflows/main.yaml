@@ -3,7 +3,8 @@ name: C++ Associativity Test
 on:
   push:
     branches:
-      - main 
+      - main
+      - nbexp
 
 jobs:
   build-and-commit:
