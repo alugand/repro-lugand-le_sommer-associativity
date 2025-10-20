@@ -1,0 +1,7 @@
+nb exp: 10 ,ratio: 0.9
+nb exp: 100 ,ratio: 0.73
+nb exp: 1000 ,ratio: 0.754
+nb exp: 10000 ,ratio: 0.7448
+nb exp: 100000 ,ratio: 0.74455
+nb exp: 1000000 ,ratio: 0.745563
+nb exp: 10000000 ,ratio: 0.745977
