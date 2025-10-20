@@ -3,7 +3,7 @@ name: C++ Associativity Test
 on:
   push:
     branches:
-      - main 
+      - option-compil
 
 jobs:
   build-and-commit:

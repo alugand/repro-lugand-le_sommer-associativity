@@ -4,7 +4,7 @@ echo "Starting C++ compilation and execution..."
 
 cd /github/workspace
 
-g++ -o number number.cpp
+g++ -O2 -ffloat-store -fno-fast-math -o number number.cpp
 
 ./number
 
