@@ -12,7 +12,7 @@ This program evaluates how often it holds true over a large number of random exp
 In your shell run the following lines:
 ``` shell
 docker build -t repro .
-docker run -v .:/app/results repro
+docker run -v .:/app repro
 ```
 
 ### With your own machine
