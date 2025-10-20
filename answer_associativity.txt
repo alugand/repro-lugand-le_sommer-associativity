@@ -1,0 +1,4 @@
+Générateur aléatoire : rand() C library, précision : 0.7498
+Générateur aléatoire : Mersenne Twister (mt19937), précision : 0.7429
+Générateur aléatoire : Linear Congruential (minstd_rand), précision : 0.7354
+Générateur aléatoire : Default Engine, précision : 0.7463
