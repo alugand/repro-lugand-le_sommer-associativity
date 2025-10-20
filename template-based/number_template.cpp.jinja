@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    ofstream answ("{{ output_file }}", ios::app);
+    if(!answ.is_open()){
+        cout << "Erreur ouverture fichier resultat" << endl;
+    } else {
+        int valeurok = 0;
+        int nbexperience = {{ repetitions }};
+        for(int i = 0; i < nbexperience; i++){
+            {{ type }} val1 = static_cast<{{ type }}>(rand()) / static_cast<{{ type }}>(RAND_MAX);
+            {{ type }} val2 = static_cast<{{ type }}>(rand()) / static_cast<{{ type }}>(RAND_MAX);
+            {{ type }} val3 = static_cast<{{ type }}>(rand()) / static_cast<{{ type }}>(RAND_MAX);
+            if({{ operation1 }} == {{ operation2 }}){
+                valeurok++;
+            }
+        }
+        {{ type }} resultat = static_cast<{{ type }}>(valeurok) / nbexperience;
+        answ << resultat << endl;
+        answ.close();
+    }
+    return 0;
+}
