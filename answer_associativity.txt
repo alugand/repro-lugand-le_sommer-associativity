@@ -1,0 +1,3 @@
+Avec des float : 0.748
+Avec des double : 0.7416
+Avec des long double : 0.7782
