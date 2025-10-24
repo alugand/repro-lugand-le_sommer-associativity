@@ -3,3 +3,5 @@ Avec des double : 0.7416
 Avec des long double : 0.7782
 Avec des double : 1
 Avec des long double : 2
+Avec des double : 1
+Avec des long double : 2
