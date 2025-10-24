@@ -9,9 +9,39 @@ a + (b + c) = (a + b) + c
 But in floating-point arithmetic, due to rounding errors, this equality may not always hold true.
 This program evaluates how often it holds true over a large number of random experiments.
 
-## Replicability
+## With Docker
 
-File Replicability.md contains a list of possible factors that can have an effect on the computed answer.
+In your shell run the following lines:
+
+``` shell
+docker build -t repro .
+docker run -v .:/app repro
+```
+
+## With your own machine
+
+### Setup
+
+Ensure that you have g++ installed
+
+``` shell
+g++ --version
+```
+
+If g++ is not installed run
+
+``` shell
+sudo apt install g++
+```
+
+### Compile
+
+In your shell run the following lines:
+
+``` shell
+g++ number.cpp -o number
+./number
+```
 
 ### Results
 

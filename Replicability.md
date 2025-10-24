@@ -2,6 +2,8 @@
 
 ## Factors
 
+The code associated with each facor is stored in a branch whose name is specified below.
+
 ### Random Generator (generator branch)
 
 We observe that the results are similar regardless of the random number generator used. In each of the experiments, we obtain a value between 0.74 and 0.75.
