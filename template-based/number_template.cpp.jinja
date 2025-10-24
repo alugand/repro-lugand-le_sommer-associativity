@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     srand(time(0));
-    ofstream answ("{{ output_file }}", ios::app);
+    ofstream answ("{{ output_file }}");
     if(!answ.is_open()){
         cout << "Erreur ouverture fichier resultat" << endl;
     } else {
