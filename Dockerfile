@@ -6,6 +6,6 @@ COPY . /app/
 
 RUN apt-get update && apt-get install -y g++ build-essential
 
-RUN g++ -o number number.cpp
+RUN g++ -o number number-type.cpp
 
 CMD ["./number"]

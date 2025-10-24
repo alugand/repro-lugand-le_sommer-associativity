@@ -43,7 +43,7 @@ sudo apt install g++
 In your shell run the following lines:
 
 ``` shell
-g++ number.cpp -o number
+g++ number-type.cpp -o number
 ./number
 ```
 
