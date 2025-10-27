@@ -1,4 +1,4 @@
-name: Generate and Run C++ Experiments
+name: Run C++ for Banking Problem
 
 on: [push]
 
@@ -32,7 +32,7 @@ jobs:
 
     - name: Run Python script to generate, compile, and execute C++
       run: python generate.py
-      working-directory: .banking-problem/template-based 
+      working-directory: ./banking-problem/template-based 
 
     - name: Commit
       run: |
