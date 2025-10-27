@@ -27,7 +27,7 @@ jobs:
 
     - name: Run Python script to generate, compile, and execute C++
       run: python template-based/generate.py
-      working-directory: ${{ github.workspace }}
+      working-directory: ./template-based
 
     - name: Commit and push results
       uses: stefanzweifel/git-auto-commit-action@v5
