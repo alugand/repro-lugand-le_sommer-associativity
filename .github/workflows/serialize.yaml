@@ -26,7 +26,7 @@ jobs:
         version: latest
 
     - name: Run Python script to generate, compile, and execute C++
-      run: python template-based/generate.py
+      run: python generate.py
       working-directory: ./template-based
 
     - name: Commit and push results
