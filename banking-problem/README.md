@@ -25,3 +25,7 @@ We study the template-based approach.
 ## Serialization
 
 Serialization of the template-based approach is done on each commit thanks to a github action. The folder analysis/ contains analysis of the results in a jupyter notebook.
+
+## Analysis
+
+The analysis shows that no factor allow us to get the correct answer. We tried to ask Gemini Pro to solve the problem in C++ and he gave us the banking-gemini.cpp script affirming that the result was 0.02. However when we run it we get +inf.
