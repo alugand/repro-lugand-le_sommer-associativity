@@ -34,16 +34,10 @@ jobs:
       run: python generate.py
       working-directory: ./template-based 
 
-    - name: Configure Git
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
     - name: Commit results.csv
       run: |
-        git add analyze/results.csv
-        # Commit only if there are changes staged
-        git diff --staged --quiet || git commit -m "docs: update results.csv from automated experiment run [skip ci]"
+        git add .
+        git commit -m "Automated docs: update results.csv"
 
     - name: Pull latest changes with rebase
       run: |
