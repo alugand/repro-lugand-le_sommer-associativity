@@ -18,7 +18,7 @@ int main() {
     long double final_money = current_money - 1.0;
 
     // Output the result to a file and console
-    std::ofstream outfile("/home/arnaud/Documents/5a-info/s9/repro-exp/repro-lugand-le_sommer-associativity/banking-problem/template-based/answer_long_double_variant_5.txt");
+    std::ofstream outfile("/home/runner/work/repro-lugand-le_sommer-associativity/repro-lugand-le_sommer-associativity/banking-problem/template-based/answer_long_double_variant_5.txt");
     if (outfile.is_open()) {
         // Set precision for output to capture potential differences
         outfile << std::fixed << std::setprecision(17) << final_money << std::endl;
