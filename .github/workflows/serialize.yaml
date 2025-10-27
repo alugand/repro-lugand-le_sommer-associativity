@@ -31,6 +31,9 @@ jobs:
       run: python generate.py
       working-directory: ./template-based
 
+    - name: Pull latest changes
+      run: git pull --rebase origin ${{ github.ref_name }}
+      
     - name: Commit and push results
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
