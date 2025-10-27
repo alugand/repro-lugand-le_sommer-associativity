@@ -1,0 +1,36 @@
+name: Generate and Run C++ Experiments
+
+on: [push]
+
+jobs:
+  build-run-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install jinja2 # Install the required Jinja2 library
+
+    - name: Set up GCC
+      uses: egor-tensin/setup-gcc@v1
+      with:
+        version: latest
+
+    - name: Run Python script to generate, compile, and execute C++
+      run: python template-based/generate.py
+      working-directory: ${{ github.workspace }}
+
+    - name: Commit and push results
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Automated docs: update results.csv"
+        file_pattern: "analyze/results.csv"
