@@ -1,31 +1,31 @@
 nbexp,compil-option,type,result
-10000,,float,0.7346
-10000,,long double,0.7842
-10000,,double,0.741
-10000,-O2 -ffloat-store -fno-fast-math,float,0.7527
-10000,-O2 -ffloat-store -fno-fast-math,long double,0.7881
-10000,-O2 -ffloat-store -fno-fast-math,double,0.7427
-1000,,float,0.75
-1000,,long double,0.795
-1000,,double,0.74
-1000,-O2 -ffloat-store -fno-fast-math,float,0.746
-1000,-O2 -ffloat-store -fno-fast-math,long double,0.786
-1000,-O2 -ffloat-store -fno-fast-math,double,0.758
-1000,,float,0.72
-1000,,long double,0.786
-1000,,double,0.735
-1000,-O2 -ffloat-store -fno-fast-math,float,0.741
-1000,-O2 -ffloat-store -fno-fast-math,long double,0.788
-1000,-O2 -ffloat-store -fno-fast-math,double,0.749
-100000,,float,0.74542
-100000,,long double,0.7861
-100000,,double,0.74684
-100000,-O2 -ffloat-store -fno-fast-math,float,0.74755
-100000,-O2 -ffloat-store -fno-fast-math,long double,0.78569
-100000,-O2 -ffloat-store -fno-fast-math,double,0.74525
-100000,,float,0.74755
-100000,,long double,0.78653
-100000,,double,0.74601
-100000,-O2 -ffloat-store -fno-fast-math,float,0.74447
-100000,-O2 -ffloat-store -fno-fast-math,long double,0.7852
-100000,-O2 -ffloat-store -fno-fast-math,double,0.74691
+10000,,float,0.7422
+10000,,long double,0.7824
+10000,,double,0.7551
+10000,-O2 -ffloat-store -fno-fast-math,float,0.7465
+10000,-O2 -ffloat-store -fno-fast-math,long double,0.79
+10000,-O2 -ffloat-store -fno-fast-math,double,0.747
+1000,,float,0.766
+1000,,long double,0.783
+1000,,double,0.738
+1000,-O2 -ffloat-store -fno-fast-math,float,0.753
+1000,-O2 -ffloat-store -fno-fast-math,long double,0.783
+1000,-O2 -ffloat-store -fno-fast-math,double,0.741
+1000,,float,0.746
+1000,,long double,0.785
+1000,,double,0.747
+1000,-O2 -ffloat-store -fno-fast-math,float,0.747
+1000,-O2 -ffloat-store -fno-fast-math,long double,0.782
+1000,-O2 -ffloat-store -fno-fast-math,double,0.753
+100000,,float,0.74829
+100000,,long double,0.78496
+100000,,double,0.74748
+100000,-O2 -ffloat-store -fno-fast-math,float,0.74557
+100000,-O2 -ffloat-store -fno-fast-math,long double,0.78583
+100000,-O2 -ffloat-store -fno-fast-math,double,0.74365
+100000,,float,0.74816
+100000,,long double,0.78621
+100000,,double,0.74837
+100000,-O2 -ffloat-store -fno-fast-math,float,0.74816
+100000,-O2 -ffloat-store -fno-fast-math,long double,0.78609
+100000,-O2 -ffloat-store -fno-fast-math,double,0.74542
