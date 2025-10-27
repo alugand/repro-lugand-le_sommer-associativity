@@ -1,16 +1,19 @@
 name: Generate and Run C++ Experiments
 
-on: [push]
+on: [push] 
 
 jobs:
   build-run-commit:
     runs-on: ubuntu-latest
+
     permissions:
-      contents: write
+      contents: write # Required to push changes back to the repository
 
     steps:
     - name: Check out repository code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -20,7 +23,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install jinja2 # Install the required Jinja2 library
+        pip install jinja2 # Installe la bibliothèque Jinja2 requise
 
     - name: Set up GCC
       uses: egor-tensin/setup-gcc@v1
@@ -31,11 +34,38 @@ jobs:
       run: python generate.py
       working-directory: ./template-based
 
+    - name: Stage results and stash other changes
+      run: |
+        git add analyze/results.csv
+        # Stash everything else, keeping the staged results.csv ready
+        git stash push --keep-index --include-untracked --message "WIP: Stashing generated files before pull/rebase"
+
     - name: Pull latest changes
-      run: git pull --rebase origin ${{ github.ref_name }}
-      
+      run: |
+        # Attempt the pull/rebase
+        if git pull --rebase origin ${{ github.ref_name }}; then
+          echo "Pull successful."
+        else
+          # If rebase fails (e.g., conflict on results.csv), abort the rebase and proceed with current commit
+          echo "Pull --rebase failed, possibly due to conflicts. Aborting rebase."
+          git rebase --abort
+          # Optional: Add error handling or different strategy here if needed
+        fi
+
+    - name: Pop stashed changes
+      run: |
+        # Check if there is anything to pop before attempting
+        if git stash list | head -n 1 | grep -q "WIP"; then
+          git stash pop || echo "Stash pop failed, continuing without reapplying potentially conflicting generated files."
+        else
+          echo "No stash found to pop."
+        fi
+        # Clean up any potential leftover stash entries if pop failed partially
+        git stash drop || true
+
     - name: Commit and push results
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "Automated docs: update results.csv"
-        file_pattern: "analyze/results.csv"
+        commit_message: "docs: update results.csv from automated experiment run"
+
+
