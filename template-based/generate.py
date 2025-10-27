@@ -25,7 +25,6 @@ for factor in factors:
     filename = "generated_number_check.cpp"
     with open(filename, "w") as f:
         f.write(code)
-    print(f"Code généré dans {filename}")
     
     # Compile the C++ code
     compile_process = subprocess.run(f"g++ {factor['option1']} generated_number_check.cpp -o generated_number_check", shell=True, capture_output=True, text=True)
@@ -61,5 +60,3 @@ with open('../analyze/results.csv', 'w+', newline='') as f_results:
     writer = csv.DictWriter(f_results, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(results)
-
-print("Experiments finished. Results stored in ../analyze/results.csv")
