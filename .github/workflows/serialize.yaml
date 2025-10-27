@@ -5,6 +5,8 @@ on: [push]
 jobs:
   build-run-commit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Check out repository code
