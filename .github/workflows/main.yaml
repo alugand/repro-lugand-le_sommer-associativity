@@ -26,7 +26,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add answer_associativity.txt
+          git add .
           # Commiter seulement s'il y a des changements
           git commit -m "Automated: Add/update associativity result" || echo "No changes to commit"
           git push
