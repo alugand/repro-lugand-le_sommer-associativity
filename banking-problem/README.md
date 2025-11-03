@@ -12,7 +12,7 @@ After n years, I take 1 euro as a fee and multiply by n.
 To retrieve my money, there is a 1 euro fee.
 In 50 years, for my retirement, how much money will I have?”
 
-This program evaluates how the results differs depending on the factors we use.
+This program evaluates how the results differ depending on the factors we use.
 
 ## Replicability
 
@@ -24,8 +24,17 @@ We study the template-based approach.
 
 ## Serialization
 
-Serialization of the template-based approach is done on each commit thanks to a github action. The folder analysis/ contains analysis of the results in a jupyter notebook.
+Serialization of the template-based approach is done on each commit, thanks to a GitHub action. The folder analysis/ contains analysis of the results in a jupyter notebook.
 
 ## Analysis & LLM
 
-The analysis shows that no factor allow us to get the correct answer. We tried to ask Gemini Pro to solve the problem in C++ and he gave us the banking-gemini.cpp script affirming that the result was 0.02. However when we run it we get +inf.
+The analysis shows that no factor allows us to get the correct answer. We tried to ask Gemini Pro to solve the problem in C++, and he gave us the banking-gemini.cpp script affirming that the result was 0.02. However, when we run it we get +inf.
+
+## Compile and run
+
+First, ensure that you have g++ installed on your device. Then run the following lines to compile and run the *.cpp files.
+
+```bash
+g++ banking.cpp -o banking
+./banking
+```
