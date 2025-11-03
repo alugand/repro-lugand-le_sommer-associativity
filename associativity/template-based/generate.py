@@ -55,7 +55,7 @@ for factor in factors:
     })
 
 # Store results in results.csv
-with open('../analyze/results.csv', 'w+', newline='') as f_results:
+with open('analyze/results.csv', 'w+', newline='') as f_results:
     fieldnames = ['nbexp', 'compil-option', 'type', 'result']
     writer = csv.DictWriter(f_results, fieldnames=fieldnames)
     writer.writeheader()
