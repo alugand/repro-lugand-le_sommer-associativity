@@ -2,7 +2,7 @@
 
 echo "Starting C++ compilation and execution..."
 
-cd /github/workspace
+cd /github/workspace/associativity
 
 g++ -o number number.cpp
 

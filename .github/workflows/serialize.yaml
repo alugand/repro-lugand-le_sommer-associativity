@@ -32,7 +32,7 @@ jobs:
 
     - name: Run Python script to generate, compile, and execute C++
       run: python generate.py
-      working-directory: ./template-based 
+      working-directory: ./associativity/template-based 
 
     - name: Commit results.csv
       run: |
