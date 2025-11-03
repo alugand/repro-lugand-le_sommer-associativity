@@ -19,7 +19,10 @@ We study different approachs to explore more variability factors. Those approach
 
 ## Serialization
 
-Serialization of the template-based approach is done on each commit thanks to a github action. The folder analysis/ contains analysis of the results in a jupyter notebook.
+Serialization of the template-based approach is done on each commit thanks to a github action. The folder analysis/ contains analysis of the results in a jupyter notebook. To run the jupyter notebook and rerun the experiments, create a python venv in the root folder and install python libraries :
+```bash
+pip install -r requirements.txt
+```
 
 ### Results
 
